@@ -15,7 +15,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 
 import com.cykul04.palapitta.R;
-import com.cykul04.palapitta.utils.Prefs;
 
 public class SplashScreenActivity extends Activity {
 
