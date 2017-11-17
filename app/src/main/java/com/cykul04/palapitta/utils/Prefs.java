@@ -11,15 +11,11 @@ import java.util.Set;
 
 
 public class Prefs {
-
-
-    public static final String EVENT_CODE = "eventcode";
-    public static final String CUSTOMERID = "customerID";
-    public static final String REGISTERED = "registered";
-    public static final String RSVP_SUBMITTED = "rsvp_submitted";
-    public static final String QUIZ = "quiz";
     public static final String USERNAME = "username";
     public static final String FEEDBACK = "feedback";
+    public static final String LOGGEDIN = "logged";
+    public static final String PAYTM = "paytm";
+    public static final String REGISTERED ="registered" ;
     /**
      * Initialize the Prefs helper class to keep a reference to the
      * SharedPreference for this application the SharedPreference will use the
@@ -247,14 +243,10 @@ public class Prefs {
      * Clear session details
      */
     public static void logoutUser(Context context) {
-        getPreferences().edit().clear().apply();
-       /* Intent i = new Intent(context, LoginActivity.class);
+        /*getPreferences().edit().clear().apply();
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        // Staring Login Activity
         context.startActivity(i);*/
-
-
     }
 
 

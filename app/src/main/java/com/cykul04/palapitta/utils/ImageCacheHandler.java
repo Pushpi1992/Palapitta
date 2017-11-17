@@ -4,12 +4,13 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
 import android.widget.ImageView;
 
+import com.cykul04.palapitta.R;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
-import com.syf.just_engage.R;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -48,18 +49,18 @@ public class ImageCacheHandler {
         } else {
             Picasso.with(mContext)
                     .load(imageURL)
-                    .placeholder(R.drawable.loading)   // optional
+                    .placeholder(R.drawable.ic_menu_gallery)   // optional
                     .error(R.drawable.loading)
                     .fit()
                     .into(imageView, new Callback() {
                         @Override
                         public void onSuccess() {
-                            /*try {
-                                //saveImageToMemory(userId, ((BitmapDrawable) imageView.getDrawable()).getBitmap());
+                            try {
+                                saveImageToMemory(userId, ((BitmapDrawable) imageView.getDrawable()).getBitmap());
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
-                            // bitmap = findImageFromMemory(userId);*/
+                             bitmap = findImageFromMemory(userId);
 
                         }
 

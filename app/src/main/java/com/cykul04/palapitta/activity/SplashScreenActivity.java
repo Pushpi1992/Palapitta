@@ -13,8 +13,8 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
-
 import com.cykul04.palapitta.R;
+import com.cykul04.palapitta.utils.Prefs;
 
 public class SplashScreenActivity extends Activity {
 
@@ -50,6 +50,20 @@ public class SplashScreenActivity extends Activity {
 
             @Override
             public void run() {
+                /*if (Prefs.getBoolean(Prefs.LOGGEDIN,false)){
+                    startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
+                }else if (!Prefs.getBoolean(Prefs.PAYTM,false) && Prefs.getBoolean(Prefs.REGISTERED,false)){
+                    startActivity(new Intent(SplashScreenActivity.this, PaytmAndProfileActivity.class));
+                }else {
+                    startActivity(new Intent(SplashScreenActivity.this, RegistrationActivity.class));
+                }*/
+                if (!Prefs.getBoolean(Prefs.REGISTERED,false)){
+                    startActivity(new Intent(SplashScreenActivity.this,RegistrationActivity.class));
+                    SplashScreenActivity.this.finish();
+                }else {
+                    startActivity(new Intent(SplashScreenActivity.this,MainActivity.class));
+                    SplashScreenActivity.this.finish();
+                }
                 // This method will be executed once the timer is over
                 // Start your app main activity
                /* if (Prefs.getBoolean(Prefs.REGISTERED,false)){

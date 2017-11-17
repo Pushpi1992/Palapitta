@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/title_tv"
+    android:layout_marginBottom="@dimen/d10"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/llLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.cykul04.palapitta.views.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            android:gravity="center"
+            android:text="Complete Profile"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/s22" />
+
+            <com.cykul04.palapitta.views.CircularImageView
+                android:id="@+id/imv_take_pic"
+                android:layout_width="@dimen/d150"
+                android:layout_height="@dimen/d150"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/cemara_take_pic"
+                android:textColor="@color/colorPrimary"
+                app:border="true"
+                app:border_color="@color/light_green"
+                app:shadow="true"
+                />
+           <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/profile_iv"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/d15"
+                android:orientation="vertical">
+
+                <com.cykul04.palapitta.views.CustomFontTextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="K sharath varma"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="18sp" />
+
+                <com.cykul04.palapitta.views.CustomFontTextView
+                    android:id="@+id/referal_code_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/d5"
+                    android:text="9502324196"
+                    android:textSize="15sp" />
+            </LinearLayout>-->
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d15"
+                android:layout_marginRight="@dimen/d15"
+                android:hint="Name"
+                app:errorTextAppearance="@color/colorBtn">
+
+                <com.cykul04.palapitta.views.CustomEditText
+                    android:id="@+id/et_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:longClickable="false"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/darkGrey" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d15"
+                android:layout_marginRight="@dimen/d15"
+                android:hint="Email"
+                app:errorTextAppearance="@color/colorBtn">
+
+                <com.cykul04.palapitta.views.CustomEditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:longClickable="false"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/darkGrey" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_mobile_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d15"
+                android:layout_marginRight="@dimen/d15"
+                android:hint="Mobile"
+                app:errorTextAppearance="@color/colorBtn">
+
+                <com.cykul04.palapitta.views.CustomEditText
+                    android:id="@+id/et_mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#404041"
+                    />
+            </android.support.design.widget.TextInputLayout>
+       <!-- <com.cykul04.palapitta.views.CustomFontTextView
+            android:id="@+id/tv_verifiy_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="Verify OTP"
+            android:visibility="visible"
+            android:layout_marginEnd="@dimen/d15"
+            android:layout_gravity="end"/>-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_organisation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d15"
+                android:layout_marginRight="@dimen/d15"
+                android:hint="Organisation"
+                app:errorTextAppearance="@color/colorBtn">
+
+                <com.cykul04.palapitta.views.CustomEditText
+                    android:id="@+id/et_pin_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#404041" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d15"
+                android:layout_marginRight="@dimen/d15"
+                android:hint="Age"
+                app:errorTextAppearance="@color/colorBtn">
+
+                <com.cykul04.palapitta.views.CustomEditText
+                    android:id="@+id/et_city_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:longClickable="false"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#404041" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_state_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d15"
+                android:layout_marginRight="@dimen/d15"
+                android:hint="Gender"
+                app:errorTextAppearance="@color/colorBtn">
+
+                <com.cykul04.palapitta.views.CustomEditText
+                    android:id="@+id/et_state_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:longClickable="false"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#404041" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_country_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d15"
+                android:layout_marginRight="@dimen/d15"
+                android:hint="Address"
+                app:errorTextAppearance="@color/colorBtn"
+                >
+                <com.cykul04.palapitta.views.CustomEditText
+                    android:id="@+id/et_country_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:longClickable="false"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#404041"/>
+            </android.support.design.widget.TextInputLayout>
+        <com.cykul04.palapitta.views.CustomButton
+            android:id="@+id/id_proof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/button"
+            android:layout_marginLeft="@dimen/d15"
+            android:layout_marginRight="@dimen/d15"
+            android:text="ID Proof"
+            android:textAllCaps="true"
+            android:textSize="18sp" />
+        <com.cykul04.palapitta.views.CustomButton
+            android:id="@+id/select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:padding="@dimen/d5"
+            android:layout_weight="1"
+            android:text="submit"
+            android:layout_margin="@dimen/_10sdp"            android:textAllCaps="true"
+            android:textSize="18sp" />
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/d15"
+            android:layout_marginTop="@dimen/d10"
+            android:layout_marginLeft="@dimen/d15"
+            android:layout_marginRight="@dimen/d15"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <com.cykul04.palapitta.views.CustomButton
+                android:id="@+id/cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:text="skip"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>-->
+    </LinearLayout>
+</ScrollView>

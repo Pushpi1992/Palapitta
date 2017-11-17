@@ -1,3 +1,16 @@
+<!DOCTYPE resources[<!ENTITY BASE_URL "https://www.cykul.com/Apps/ppcp/">]>
 <resources>
     <string name="app_name">Palapitta</string>
+    <string name="MID">cykull90786400441790</string>
+    <string name="CHANNEL_ID">WAP</string>
+    <string name="INDUSTRY_TYPE_ID">Retail110</string>
+    <string name="WEBSITE">cykulwap</string>
+    <string name="MERCHANT1">https://www.cykul.com/Apps/PaytmWallet/paymentchecksumgeneration.php</string>
+    <string name="MERCHANT2">https://www.cykul.com/Apps/PaytmWallet/paymentchecksumvalidation.php</string>
+    <string name="REGISTRATION">&BASE_URL;registration/register.php</string>
+    <string name="OTP_VERIFICATION">&BASE_URL;registration/validateOTP.php</string>
+    <string name="about_park">Pala Pitta Cycling Park (PPCP for short) is a wonderful urban green infrastructure developed for the benefit of residents and visitors of Cyberabad. Named after the State Bird of Telangana “Pala Pitta” (Blue Jay), this “Reserved Forest” dedicated solely for cycling based health and recreational activities, is one of its kind in India. It is situated opposite to Botanical Garden, Kothaguda.   The park was inaugurated by Honourable Minister for IT &amp; MAUD, Shri. K.T. Rama Rao on 20th November 2017.
+Palapitta Cycling Park is an initiative by Telangana State Forest Development Corporation Ltd. (TSFDC) to provide safe, healthy, and joyful cycling experiences to the residents and visitors. It has a well-designed cycling track running up to 3KM right in the middle of a sprawling urban forest. Visitors and members can either bring along their own cycle or rent one right at the park.  There are many additional cycling related facilities provided to enhance the cycling experience in the park.
+Interested people can access this park every morning 6am to 10am and evening 4:00pm to 6:30pm.   A single day pass, or a monthly subscription can be purchased either at the park or at the website www.palapitta.org  or through the PPCP mobile app. (available on APP &amp; PLAY STORES). The park administration can also be reached on the phone at +91 888 602 9585.  Enjoy green cycling!</string>
+
 </resources>

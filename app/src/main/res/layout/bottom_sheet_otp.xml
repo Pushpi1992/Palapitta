@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/_16sdp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.cykul04.palapitta.views.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Enter OTP"
+            android:textColor="#444"
+            android:textSize="@dimen/_15sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/text1"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/colorBtn"
+                android:maxLines="1"
+                android:textSize="@dimen/_22sdp" />
+
+            <EditText
+                android:id="@+id/text2"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/colorBtn"
+                android:maxLines="1"
+                android:textSize="@dimen/_22sdp" />
+
+            <EditText
+                android:id="@+id/text3"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/colorBtn"
+                android:maxLines="1"
+                android:textSize="@dimen/_22sdp" />
+
+            <EditText
+                android:id="@+id/text4"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/colorBtn"
+                android:maxLines="1"
+                android:textSize="@dimen/_22sdp" />
+
+            <EditText
+                android:id="@+id/text5"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/colorBtn"
+                android:maxLines="1"
+                android:textSize="@dimen/_22sdp" />
+
+            <EditText
+                android:id="@+id/text6"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/colorBtn"
+                android:maxLines="1"
+                android:textSize="@dimen/_22sdp" />
+
+        </LinearLayout>
+
+        <com.cykul04.palapitta.views.CustomButton
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/d20"
+            android:layout_marginRight="@dimen/d20"
+            android:layout_marginTop="@dimen/d20"
+            android:layout_marginBottom="@dimen/d15"
+            android:gravity="center"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:background="@drawable/button"
+            android:textSize="@dimen/s18" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

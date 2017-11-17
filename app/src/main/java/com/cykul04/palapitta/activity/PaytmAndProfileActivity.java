@@ -1,10 +1,7 @@
 package com.cykul04.palapitta.activity;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.cykul04.palapitta.R;
@@ -19,8 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
-
+public class PaytmAndProfileActivity extends AppCompatActivity {
     private String amount;
     private String orderId;
     private String customerId;
@@ -31,48 +27,18 @@ public class MainActivity extends AppCompatActivity {
     private String txn_id;
     private String txn_checksum;
     private String txn_response_msg;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Prefs.putBoolean(Prefs.REGISTERED,true);
-    }
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);//Menu Resource, Menu
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
-                getSupportFragmentManager().popBackStack();
-            } else {
-                finish();
-            }
-        }
-        switch (item.getItemId()) {
-            case R.id.parkDetails:
-                startActivity(new Intent(MainActivity.this,PaytmAndProfileActivity.class));
-                break;
-            case R.id.contactus:
-                break;
-           /* case R.id.transactions:
-                paytmPayment();
-                break;
-            case R.id.contactus:
-                break;
-            case R.id.logout:
-                Prefs.logoutUser(this);
-                break;*/
-            default:
-                return super.onOptionsItemSelected(item);
+        setContentView(R.layout.activity_paytm_and_profile);
+       // Prefs.putBoolean(Prefs.PAYTM,false);
+       // Prefs.putBoolean(Prefs.REGISTERED,true);
+       /* paytmPayment();
+        finish();*/
 
-        }
-        return true;
 
-    }
 
+}
     private void initOrderId() {
         Random r = new Random(System.currentTimeMillis());
         orderId = "CYKHRBSUB" + (1 + r.nextInt(2)) * 100000 + r.nextInt(100000);
@@ -83,14 +49,14 @@ public class MainActivity extends AppCompatActivity {
         customerId = "CUST" + (1 + r.nextInt(2)) * 100000 + r.nextInt(100000);
 
     }
-    private void paytmPayment()
-    {
+
+    private void paytmPayment() {
         amount = String.valueOf(500);
-        if(!amount.contains(".")){
-            amount = amount+".00";
+        if (!amount.contains(".")) {
+            amount = amount + ".00";
         }
-        initOrderId();
-        initCustomerId();
+       // initOrderId();
+       // initCustomerId();
 
         PaytmPGService Service = PaytmPGService.getProductionService();
         Map<String, String> paramMap = new HashMap<String, String>();
@@ -109,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         String MERCHANT2 = getString(R.string.MERCHANT2);
 
 
-        PaytmMerchant Merchant = new PaytmMerchant(MERCHANT1 , MERCHANT2);
+        PaytmMerchant Merchant = new PaytmMerchant(MERCHANT1, MERCHANT2);
 
 
         Service.initialize(Order, Merchant, null);
@@ -131,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                         // // Response bundle contains the merchant response
                         // parameters.
                         Log.d("LOG", "Payment successful " + inResponse);
-                        Toast.makeText(MainActivity.this, "Payment Transaction is successful", Toast.LENGTH_LONG).show();
+                        Toast.makeText(PaytmAndProfileActivity.this, "Payment Transaction is successful", Toast.LENGTH_LONG).show();
                         txn_status = inResponse.getString("STATUS");
                         txn_orderId = inResponse.getString("ORDERID");
                         txn_amount = inResponse.getString("TXNAMOUNT");
@@ -140,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                         txn_checksum = inResponse.getString("IS_CHECKSUM_VALID");
                         txn_response_msg = inResponse.getString("RESPMSG");
 
-                       // statusCheck();
+                        // statusCheck();
                     }
 
 
@@ -153,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                         // failure. // Response bundle contains the merchant
                         // response parameters.
                         Log.d("LOG", "Payment failed " + inErrorMessage);
-                        Toast.makeText(MainActivity.this, "Payment Transaction Failed", Toast.LENGTH_LONG).show();
+                        Toast.makeText(PaytmAndProfileActivity.this, "Payment Transaction Failed", Toast.LENGTH_LONG).show();
                         txn_status = inResponse.getString("STATUS");
                         txn_orderId = inResponse.getString("ORDERID");
                         txn_amount = inResponse.getString("TXNAMOUNT");
@@ -203,5 +169,4 @@ public class MainActivity extends AppCompatActivity {
                 });
 
     }
-
 }
