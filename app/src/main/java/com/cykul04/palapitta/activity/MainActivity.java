@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cykul04.palapitta.R;
@@ -31,11 +32,14 @@ public class MainActivity extends AppCompatActivity {
     private String txn_id;
     private String txn_checksum;
     private String txn_response_msg;
+    private TextView available_tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        available_tv = (TextView)findViewById(R.id.available_tv);
+        available_tv.setText(Prefs.getString("message",""));
         Prefs.putBoolean(Prefs.REGISTERED,true);
     }
     public boolean onCreateOptionsMenu(Menu menu) {

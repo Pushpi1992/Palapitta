@@ -148,8 +148,11 @@ public class CustomBottomSheetOtpDialogFragment extends BottomSheetDialogFragmen
                                 Log.d("sharath","22222220"+response);
                                 String result = jsonObject.getString("result_status");
                                 String reportStatus = jsonObject.getString("report_status");
+                                String message = jsonObject.getString("message");
+                                Prefs.putString("message",message);
                                 if (result.equals("true")) {
                                     Intent login = new Intent(getActivity(), MainActivity.class);
+                                    login.putExtra("message",message);
                                     login.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                     getActivity().startActivity(login);
                                     getActivity().finish();
